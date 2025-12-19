@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gitの練習</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <h1>Gitの練習</h1>
     <p>おなかがすいた</p>
+
+    <!-- ul>li{li-$}*5 -->
+    <p>li-3だけ、文字の色を赤に変更してください。</p>
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+        <li>li-4</li>
+        <li>li-5</li>
+    </ul>
+
+    <section class="sec01">
+        <h2>何番目疑似クラス</h2>
+        <p class="red">para1</p>
+        <ul>
+            <li>li-1</li>
+            <li>li-2</li>
+            <li>li-3</li>
+        </ul>
+        <ul>
+            <li>li-4</li>
+            <li>li-5</li>
+            <li>li-6</li>
+        </ul>
+        <div class="div01">
+            <p>para2</p>
+            <p>para3</p>
+        </div>
+    </section>
+
+    <section class="sec02">
+        <form action="#" method="post">
+            <p>
+                <label for="user_name">
+                    <span>お名前</span>
+                    <input type="text" name="user_name" id="user_name" required>
+                </label>
+            </p>
+            <p>
+                <label for="user_email">
+                    <span>メールアドレス</span>
+                    <input type="email" name="user_email" id="user_email" required>
+                </label>
+            </p>
+            <p>
+                性別
+                <label for="gender1"><input type="radio" name="gender" id="gender1" value="1" checked>男性</label>
+                <label for="gender2"><input type="radio" name="gender" id="gender2" value="2">女性</label>
+                <label for="gender3"><input type="radio" name="gender" id="gender3" value="3">その他</label>
+            </p>
+            <p>
+                <label for="message">
+                    お問い合わせ内容
+                    <textarea name="message" id="message"></textarea>
+                </label>
+            </p>
+            <p>
+                <!-- ボタンを無効化(押せなくする)には？ -->
+                <input type="submit" value="送信" disabled>
+            </p>
+        </form>
+    </section>
 </body>
+
 </html>

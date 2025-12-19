@@ -23,3 +23,111 @@ body {
     /* カスタムプロパティの利用: var(カスタムプロパティ名) */
     background-color: var(--portfolio-grey);
 }
+
+/* li-3だけ、文字の色を赤に変更してください。 */
+/* 何番目系疑似クラス */
+
+/* 
+1.child系
+:first-child
+:last-child
+:nth-child(n)
+
+2.of-type系
+:first-of-type
+:last-of-type
+:nth-of-type(n)
+
+偶数番目: even | 2n
+奇数番目: odd | 2n + 1
+
+*/
+/* li:nth-child(2n) {
+    color: red;
+} */
+
+/* of-typeを使ってpara1の文字の色をgreenにしてください */
+.sec01>p:first-of-type {
+    color: green;
+}
+
+/* childを使ってpara1に下線を引いてください */
+.sec01>p:nth-child(2) {
+    text-decoration: underline;
+}
+
+/* li-2とli-5を太字にしてください */
+.sec01 ul li:nth-child(2) {
+    font-weight: bold;
+}
+
+/* li-5だけ文字のサイズを24pxにしてください */
+.sec01 ul:nth-of-type(2) li:nth-of-type(2) {
+    font-size: 24px;
+}
+
+/* フォームのスタイルをリセット */
+input[type=text],
+input[type=submit],
+textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
+
+/* 
+お名前とメールアドレスとメッセージの入力欄に
+太さ1px、実線、#000000のボーダーを引く
+*/
+/* input[type="text"],
+input[type="email"],
+textarea{
+    border: 1px solid var(--portfolio-black);
+    background-color: var(--portfolio-white);
+} */
+input:is([type="text"], [type="email"]),
+textarea {
+    border: 1px solid var(--portfolio-black);
+    background-color: var(--portfolio-white);
+}
+
+/* フォーカスされている入力欄を強調する */
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--portfolio-green);
+}
+
+/* 必須項目のスタイルを変更する */
+input:required {
+    background-color: pink;
+}
+
+/* 疑似要素:has() */
+label:has(input[required]) span::after{
+    content: "必須";
+    font-size: 0.8em;
+    display: inline-block;
+    background-color: var(--portfolio-green);
+    color: var(--portfolio-white);
+    border-radius: 3px;
+    padding-inline:6px;
+    padding-block: 3px;
+    margin-inline-start: 5px;
+}
+
+input[type=submit]{
+    border-radius: 8px;
+    background-color: var(--portfolio-green);
+    color: var(--portfolio-white);
+    padding-inline: 13px;
+    padding-block: 8px;
+}
+
+input[type=submit]:disabled{
+    background-color: var(--portfolio-grey);
+    color: var(--portfolio-black);
+    border: 1px solid var(--portfolio-black) ;
+    opacity: 0.5;
+}
