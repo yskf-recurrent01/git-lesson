@@ -81,12 +81,12 @@ textarea {
 お名前とメールアドレスとメッセージの入力欄に
 太さ1px、実線、#000000のボーダーを引く
 */
-/* input[type="text"],
+input[type="text"],
 input[type="email"],
 textarea{
     border: 1px solid var(--portfolio-black);
     background-color: var(--portfolio-white);
-} */
+}
 input:is([type="text"], [type="email"]),
 textarea {
     border: 1px solid var(--portfolio-black);
@@ -121,8 +121,14 @@ input[type=submit]{
     border-radius: 8px;
     background-color: var(--portfolio-green);
     color: var(--portfolio-white);
-    padding-inline: 13px;
-    padding-block: 8px;
+    /* padding-inline: 13px; */
+    /* padding-block: 8px; */
+    padding: 8px 13px;
+    /* padding: 0 13px; */
+    display: block;
+    margin-top: 80px;
+    /* margin: 0 auto; */
+    margin-inline: auto;
 }
 
 input[type=submit]:disabled{
